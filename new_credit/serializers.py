@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Usuario, Divida
+from .models import Usuario, Divida, Consulta
 
 
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -24,4 +24,14 @@ class DividaSerializer(serializers.ModelSerializer):
             'usuario',
             'data_vencimento',
             'divida'
+        )
+
+
+class ConsultaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Consulta
+        fields = (
+            'id',
+            'data_criacao',
+            'data_modificacao'
         )

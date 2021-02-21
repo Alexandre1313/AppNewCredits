@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Usuario, Divida
+from .models import Usuario, Divida, Consulta
 
 
 @admin.register(Usuario)
@@ -22,4 +22,13 @@ class DividaAdmin(admin.ModelAdmin):
         'usuario',
         'data_vencimento',
         'divida'
+    ]
+
+
+@admin.register(Consulta)
+class ConsultaAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'data_criacao',
+        'data_modificacao'
     ]

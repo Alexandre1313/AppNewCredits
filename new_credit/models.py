@@ -32,3 +32,14 @@ class Divida(Base):
 
     def __str__(self):
         return f'A dívida de {self.usuario} é de {self.divida}'
+
+
+class Consulta(Base):
+    id_usuario = models.ForeignKey(Usuario, related_name='Consultas', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Consulta'
+        verbose_name_plural = 'Consultas'
+
+    def __str__(self):
+        return self.id_usuario
