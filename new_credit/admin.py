@@ -29,6 +29,7 @@ class DividaAdmin(admin.ModelAdmin):
 class ConsultaAdmin(admin.ModelAdmin):
     list_display = [
         'id',
+        'id_usuario',
         'data_criacao',
         'data_modificacao'
     ]
