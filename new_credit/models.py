@@ -42,4 +42,4 @@ class Consulta(Base):
         verbose_name_plural = 'Consultas'
 
     def __str__(self):
-        return self.id_usuario
+        return str(self.id_usuario)
